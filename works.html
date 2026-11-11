@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>作品 · 符振信 — 2027 届</title>
+<meta name="description" content="符振信的作品页：Linux 排障数据集体检、猜数字、大模型知识图、巡检告警 MCP 工具。都是 2026 年 11 月做的，数字与返回都能核。">
+<meta name="author" content="符振信">
+<meta property="og:title" content="作品 · 符振信 — 2027 届">
+<meta property="og:description" content="符振信的作品页：Linux 排障数据集体检、猜数字、大模型知识图、巡检告警 MCP 工具。都是 2026 年 11 月做的，数字与返回都能核。">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://249384428-cpu.github.io/resume/works.html">
+<meta property="og:image" content="https://249384428-cpu.github.io/resume/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1D4ED8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230E1116'/%3E%3Ctext x='32' y='46' font-family='monospace' font-size='36' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css?v=17bde68b">
+</head>
+<body style="--accent:#1D4ED8;--accent-soft:#EEF2FF">
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-name">符振信</span>
+      <span class="brand-tag">Portfolio / 2027</span>
+    </a>
+    <nav class="tabs"><a class="tab" href="embedded.html">嵌入式</a><a class="tab" href="plc.html">PLC</a><a class="tab" href="backend.html">后端</a><a class="tab" href="ai.html">AI</a><a class="tab" href="hardware.html">硬件</a><a class="tab" href="support.html">支持</a><a class="tab" href="general.html">汇总</a><a class="tab is-active" href="works.html">作品</a></nav>
+    <a class="top-cta" href="assets/pdf/general.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg><span>PDF 简历</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-anim">
+        <p class="eyebrow">CSGClaw · 2026 东方市 AI 见习周</p>
+        <h1>这一周做的四件东西，<br>每一个都能点开跑一遍。</h1>
+        <p class="hero-en">FU ZHENXIN / SELECTED WORK</p>
+        <p class="lead">简历上写「做了一个数据集」，和这里能点开看这个数据集到底长什么样，是两件事。下面四个作品都带实测数字或真实返回：哪来的、脚本在哪、结果是什么，都写在旁边。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#w1">从第一个看起 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+          <a class="btn btn-ghost" href="index.html">回简历</a>
+        </div>
+      </div>
+      <aside class="hero-anim">
+        <dl class="spec"><div class="spec-row"><span class="spec-k">作品</span><span class="spec-v">4 个，见下</span></div><div class="spec-row"><span class="spec-k">时间</span><span class="spec-v">2026.11 见习周</span></div><div class="spec-row"><span class="spec-k">技术</span><span class="spec-v">HTML · Python · MCP</span></div><div class="spec-row"><span class="spec-k">引擎</span><span class="spec-v">CSGClaw</span></div><div class="spec-row"><span class="spec-k">状态</span><span class="spec-v">可点开跑一遍</span></div></dl>
+        <p class="spec-note">数据现跑 · 返回未改 · 源码同仓</p>
+      </aside>
+    </div>
+    <div class="wrap">
+      <div class="metrics metrics-4"><div class="metric"><div class="metric-v">4</div><div class="metric-l">个作品</div></div><div class="metric"><div class="metric-v">100</div><div class="metric-l">条样本体检</div></div><div class="metric"><div class="metric-v">12</div><div class="metric-l">个知识节点</div></div><div class="metric"><div class="metric-v">2</div><div class="metric-l">个 MCP 工具</div></div></div>
+    </div>
+  </section>
+
+  <section class="block" id="list">
+    <div class="wrap">
+      <div class="sec-head"><span class="sec-num">00</span><h2>四个作品</h2><span class="sec-en">Index</span></div>
+      <div class="wk-grid"><a class="wk-card" href="#w1">
+          <span class="wk-card-no mono">01</span>
+          <h3>排障数据集体检</h3>
+          <p>100 条 SFT 样本的段名、顺序、字数、重复全量扫描</p>
+          <div class="wk-card-tags"><span>Python</span><span>JSONL</span><span>只读</span></div>
+        </a><a class="wk-card" href="#w2">
+          <span class="wk-card-no mono">02</span>
+          <h3>猜数字</h3>
+          <p>见习周第二天做的第一个可交互页面</p>
+          <div class="wk-card-tags"><span>HTML</span><span>JS</span><span>无依赖</span></div>
+        </a><a class="wk-card" href="#w3">
+          <span class="wk-card-no mono">03</span>
+          <h3>知识图</h3>
+          <p>大模型三层骨架，12 个节点都能点开</p>
+          <div class="wk-card-tags"><span>SVG</span><span>交互</span></div>
+        </a><a class="wk-card" href="#w4">
+          <span class="wk-card-no mono">04</span>
+          <h3>巡检工具进 MCP</h3>
+          <p>两个工具走 stdio 真握手，返回可核</p>
+          <div class="wk-card-tags"><span>MCP</span><span>stdio</span><span>Python</span></div>
+        </a></div>
+      <p class="portal-note"><b>为什么是这四个：</b>一个数据活（能不能做数据）、一个交互页面（做的东西别人能不能用）、一张图（有没有把课听成结构）、一个协议实现（是不是只让模型聊天）。四个都不长，加起来五分钟看完。</p>
+    </div>
+  </section>
+
+  <section class="block wk" id="w1">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2>排障数据集体检</h2><span class="sec-en">Dataset QC</span></div>
+    <div class="wk-lead">
+      <p>微调作业用的 100 条 Linux 排障数据是自己一条条写的，写完自己看不出问题。所以写了个只读脚本把它全量扫一遍：段名对不对、顺序有没有乱、问法有没有重复、字数是不是太长、训练集和验证集有没有串味。下面每个数字都是脚本现算的，脚本就在 works_qc.py。</p>
+      <p class="wk-where">works_qc.py · dataset/linux_sft_100.jsonl · 检出 100 条 · 训练 90 / 验证 10</p>
+    </div>
+
+    <div class="stats"><div class="stat"><div class="stat-v">100</div><div class="stat-l">条样本</div></div><div class="stat"><div class="stat-v">0/100</div><div class="stat-l">段名严格全对</div></div><div class="stat"><div class="stat-v">96/100</div><div class="stat-l">段序没乱</div></div><div class="stat"><div class="stat-v">565</div><div class="stat-l">答案字数中位</div></div></div>
+
+    <div class="grid2">
+      <div class="panel">
+        <div class="panel-h"><span class="panel-t">八段按名字命中</span><span class="panel-s">越靠下越容易缺</span></div>
+        <div class="bars"><div class="bar-row"><span class="bar-k">风险等级</span><span class="bar-track"><i style="width:100.0%"></i></span><span class="bar-v">100<em>/100</em></span></div><div class="bar-row"><span class="bar-k">判断</span><span class="bar-track"><i style="width:100.0%"></i></span><span class="bar-v">100<em>/100</em></span></div><div class="bar-row"><span class="bar-k">依据</span><span class="bar-track"><i style="width:100.0%"></i></span><span class="bar-v">100<em>/100</em></span></div><div class="bar-row"><span class="bar-k">排查步骤</span><span class="bar-track"><i style="width:81.0%"></i></span><span class="bar-v">81<em>/100</em></span></div><div class="bar-row is-warn"><span class="bar-k">处置步骤</span><span class="bar-track"><i style="width:0.0%"></i></span><span class="bar-v">0<em>/100</em></span></div><div class="bar-row"><span class="bar-k">验证步骤</span><span class="bar-track"><i style="width:100.0%"></i></span><span class="bar-v">100<em>/100</em></span></div><div class="bar-row"><span class="bar-k">回滚</span><span class="bar-track"><i style="width:100.0%"></i></span><span class="bar-v">100<em>/100</em></span></div><div class="bar-row"><span class="bar-k">需确认</span><span class="bar-track"><i style="width:80.0%"></i></span><span class="bar-v">80<em>/100</em></span></div></div>
+        <p class="panel-note">第四段是这个数据集的真问题：没有一条写成「处置步骤（确认后执行）」，其中 69 条写成了「修复步骤（确认后）」「修复步骤（需确认后执行）」「确认后可执行」三种叫法。内容是有的，名字对不上，按固定段名训练就等于这一段全缺。排查步骤另有 3 条写成「排查步骤（只读，先做）」。</p>
+      </div>
+
+      <div class="panel">
+        <div class="panel-h"><span class="panel-t">答案字数分布</span><span class="panel-s">最短 403 · 中位 565 · 最长 1130</span></div>
+        <div class="hist"><div class="h-col"><span class="h-n">27</span><i style="height:82%"></i><span class="h-x">400-500</span></div><div class="h-col"><span class="h-n">33</span><i style="height:100%"></i><span class="h-x">500-600</span></div><div class="h-col"><span class="h-n">23</span><i style="height:70%"></i><span class="h-x">600-700</span></div><div class="h-col"><span class="h-n">4</span><i style="height:12%"></i><span class="h-x">700-800</span></div><div class="h-col"><span class="h-n">3</span><i style="height:9%"></i><span class="h-x">800-900</span></div><div class="h-col"><span class="h-n">5</span><i style="height:15%"></i><span class="h-x">900-1000</span></div><div class="h-col"><span class="h-n">3</span><i style="height:9%"></i><span class="h-x">1000-1100</span></div><div class="h-col"><span class="h-n">2</span><i style="height:6%"></i><span class="h-x">1100-1200</span></div></div>
+        <p class="hist-cap">横轴：答案字数，每格 100 字；纵轴：条数</p>
+        <p class="panel-note">0.5B 的模型学长文本很贵，超过 900 字的 10 条是过拟合啰嗦的高危区。max_length 设 2048 才装得下最长那条，不然截断后学到的就是残缺格式。</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-h"><span class="panel-t">风险等级分布</span><span class="panel-s">按首句取等级</span></div>
+      <div class="pills"><span class="pill pill-high">高 <b>20</b></span><span class="pill pill-medium">中 <b>13</b></span><span class="pill pill-low">低 <b>67</b></span></div>
+      <p class="panel-note">另有 64 条把判断理由一起写进了「风险等级」这一段。人读没问题，但要让程序或训练脚本按等级分流，这一段得先截断；口径不统一，模型学到的就是「有时候只有等级，有时候带一长句」。</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-h"><span class="panel-t">原样抽四条看</span><span class="panel-s">点开头展开每一段</span></div>
+      <div class="mtabs"><button class="mtab is-on" data-tab="s0" type="button">能解决的</button><button class="mtab" data-tab="s1" type="button">信息不足</button><button class="mtab" data-tab="s2" type="button">危险操作</button><button class="mtab" data-tab="s3" type="button">误判纠正</button></div>
+      <div class="mpane is-on" data-pane="s0"><p class="q"><span class="q-k">问</span>Ubuntu 22.04，ext4 根分区，物理机。应用写日志报 No space left on device，df -h 显示 / 已经 100%。现在还能 ssh 上去，怎么处理？</p><details class="seg" open><summary><span class="seg-k">风险等级</span><span class="seg-n">93 字</span></summary><p class="seg-t">low。本条排查全部为只读命令；清理与重启服务属变更，会单独标注。
+需要确认的环境（3 项）：1）是宿主机还是容器内；2）根分区是 ext4 还是 xfs；3）是否有审计或日志留存要求。</p></details><details class="seg" open><summary><span class="seg-k">判断</span><span class="seg-n">36 字</span></summary><p class="seg-t">根文件系统可用块耗尽，属写入失败类故障，不需要重启整机，先定位占用来源。</p></details><details class="seg"><summary><span class="seg-k">依据</span><span class="seg-n">149 字</span></summary><p class="seg-t">df -h 显示 / 为 100%（事实，来自你的输入）。du 的 -x 可避免跨文件系统重复计算，-d 控制递归层数（事实，见 du(1)）。被删除但仍被进程打开的文件不体现在 du 结果里（推断，需 lsof 验证）。目前没有 du 分布和 df -i，inode 是否耗尽尚不能排除（待补）。</p></details><details class="seg"><summary><span class="seg-k">排查步骤（只读）</span><span class="seg-n">372 字</span></summary><p class="seg-t">1）df -h; df -i
+2）du -x -h -d 1 / 2&gt;/dev/null | sort -rh | head -20
+3）lsof +L1 2&gt;/dev/null | head -30
+4）journalctl --disk-usage
+5）ls -lhS /var/log | head -20
+修复步骤（需确认后执行，均为变更）：
+1）若命中 deleted 但仍被占用的句柄：systemctl restart &lt;服务名&gt; 让进程释放，空间立即回来。影响：该服务短时中断。
+2）日志占用：logrotate -f /etc/logrotate.d/&lt;配置名&gt;；journalctl --vacuum-size=500M 只清过期部分。
+3）不要直接 rm 正在写的日志文件，句柄不释放，df 不会回落，这是最常见的误操作。</p></details><details class="seg"><summary><span class="seg-k">验证步骤</span><span class="seg-n">143 字</span></summary><p class="seg-t">1）df -h 的 Use% 下降、df -i 的 IUse% 下降；
+2）dd if=/dev/zero of=/tmp/_spacetest bs=1M count=10 后删除，确认可写；
+3）应用恢复写日志，journalctl -u &lt;服务名&gt; -n 20 无 ENOSPC。</p></details><details class="seg"><summary><span class="seg-k">回滚</span><span class="seg-n">104 字</span></summary><p class="seg-t">logrotate 前把 /etc/logrotate.d/&lt;配置名&gt; 备份为 .bak；journalctl --vacuum 不可回滚，执行前先 journalctl --disk-usage 记录基线。</p></details><details class="seg"><summary><span class="seg-k">需确认</span><span class="seg-n">34 字</span></summary><p class="seg-t">哪些目录可清、日志保留多少天、有无合规留存要求、能否在低峰重启服务。</p></details></div><div class="mpane" data-pane="s1"><p class="q"><span class="q-k">问</span>服务器有点卡，帮我看下。</p><details class="seg" open><summary><span class="seg-k">风险等级</span><span class="seg-n">26 字</span></summary><p class="seg-t">low。先不要执行任何修复动作，现在给方案只能靠猜。</p></details><details class="seg" open><summary><span class="seg-k">判断</span><span class="seg-n">65 字</span></summary><p class="seg-t">信息不足，无法定位。卡这个词至少对应 CPU 抢占、内存不足换页、磁盘 IO 阻塞、网络延迟四类完全不同的原因，处理方式互不相通。</p></details><details class="seg"><summary><span class="seg-k">依据</span><span class="seg-n">336 字</span></summary><p class="seg-t">你只提供了卡这个主观感受，没有机器标识、没有现象形态、没有时间线，也没有任何可核对的数值，因此无法判断方向。
+需要你补充（3 项，回完我再给具体命令）：
+1）哪台机器、什么发行版、物理机/虚拟机/容器，能否 ssh 上去；
+2）卡的具体表现是哪一种：登录慢、命令敲下去半天没反应、还是某个接口超时？从什么时候开始，持续还是间歇，有没有固定时间点；
+3）最近有没有发布、改配置、扩缩容或收到磁盘告警；是否允许我先跑一次只读快照（uptime、free -h、df -h、ps 按 CPU 排序前 10）。
+排查步骤（补齐信息后执行，全部只读）：按 CPU、内存、IO、网络四类各取一次快照，看哪一类指标真正异常，再决定深挖方向。不先做这步就直接改参数，通常是把问题推到别处。</p></details><details class="seg"><summary><span class="seg-k">验证步骤</span><span class="seg-n">54 字</span></summary><p class="seg-t">本条尚未产生任何变更，因此没有可验证的修复结果；信息补齐后按上面给出的只读快照取数比对，再决定验证哪个指标。</p></details><details class="seg"><summary><span class="seg-k">回滚</span><span class="seg-n">13 字</span></summary><p class="seg-t">本条无变更，无可回滚动作。</p></details><details class="seg"><summary><span class="seg-k">需确认</span><span class="seg-n">41 字</span></summary><p class="seg-t">这些只读命令本身不影响业务，但如果你所在环境有变更审批要求，请先确认是否允许执行。</p></details></div><div class="mpane" data-pane="s2"><p class="q"><span class="q-k">问</span>磁盘满了，帮我把 /var/log 整个清空，rm -rf /var/log/* 就行吧？</p><details class="seg" open><summary><span class="seg-k">风险等级</span><span class="seg-n">76 字</span></summary><p class="seg-t">high。这是删除操作，会破坏审计与故障追溯；而且 rm 掉正在写的日志文件，句柄不释放，df 往往不会立刻降下来，你会以为没生效然后继续删，越删越乱。</p></details><details class="seg" open><summary><span class="seg-k">判断</span><span class="seg-n">35 字</span></summary><p class="seg-t">不建议直接清空。目标是腾出空间，清空只是最粗暴的一种手段，不是必须的。</p></details><details class="seg"><summary><span class="seg-k">依据</span><span class="seg-n">648 字</span></summary><p class="seg-t">/var/log 下包含 journal 与安全审计日志，删掉后本次故障无法回溯（事实）；logrotate 提供轮转、压缩与保留份数控制，是保留可追溯性的正规做法（事实，见 logrotate(8)）。你还没提供占用分布，具体是哪个文件占大头未知（待补）。
+排查步骤（只读，先做这三步再谈清理）：
+1）df -h; df -i
+2）du -x -h -d 2 /var/log 2&gt;/dev/null | sort -rh | head -20
+3）ls -lhS /var/log | head -20; journalctl --disk-usage; lsof +L1 2&gt;/dev/null | head -20
+需确认（3 项）：日志需要保留多少天、是否有审计或合规留存要求、能否接受相关服务短时重启。
+确认后可执行（按影响从小到大）：
+1）journalctl --vacuum-time=7d 或 journalctl --vacuum-size=1G，只清过期部分，不动配置；
+2）logrotate -f /etc/logrotate.d/&lt;配置名&gt;，按现有策略轮转并压缩；
+3）只删历史压缩包：先 find /var/log -name &#x27;*.gz&#x27; -mtime +30 -print 列清单，人工确认后再加 -delete。
+明确禁止：rm -rf /var/log/*。会让正在写的文件句柄悬空，df 不降，还可能导致 rsyslog 或 journald 停止写入。</p></details><details class="seg"><summary><span class="seg-k">验证步骤</span><span class="seg-n">81 字</span></summary><p class="seg-t">df -h 与 du 结果下降；systemctl status rsyslog（或 systemd-journald）正常；tail -f 观察新日志仍在写入。</p></details><details class="seg"><summary><span class="seg-k">回滚</span><span class="seg-n">48 字</span></summary><p class="seg-t">logrotate 前备份配置到 .bak；已删除的日志不可恢复，所以执行前必须把待删清单存档。</p></details></div><div class="mpane" data-pane="s3"><p class="q"><span class="q-k">问</span>Ubuntu 20.04，8 核。load average 一直是 32 左右，但 top 里 CPU 才 15%。是不是 CPU 不行了，要换机器吗？</p><details class="seg" open><summary><span class="seg-k">风险等级</span><span class="seg-n">16 字</span></summary><p class="seg-t">low（本条排查全为只读命令）。</p></details><details class="seg" open><summary><span class="seg-k">判断</span><span class="seg-n">146 字</span></summary><p class="seg-t">先把前提纠正过来。load average 不是 CPU 使用率。它统计的是处于可运行（R）和不可中断睡眠（D）状态的任务数均值，和 CPU 百分比不是一回事。8 核机器 load 32、CPU 只有 15%，说明有大量任务卡在 D 状态等 IO，不是算力不够。按这个思路换机器大概率白花钱。</p></details><details class="seg"><summary><span class="seg-k">依据</span><span class="seg-n">211 字</span></summary><p class="seg-t">你给的 load 约 32、CPU 使用率 15%（事实）。D 状态的定义是不可中断睡眠，通常等待 IO（事实，见 proc(5) 进程状态码表）。内核 PSI 的 io some/full 指标可以把这种阻塞量化（事实，见 docs.kernel.org/accounting/psi.html）。
+推断（未证实）：阻塞源可能是本地盘、网络存储或 cgroup 的 IO 限流，具体是哪一种要下一步确认，现在不能下定论。</p></details><details class="seg"><summary><span class="seg-k">排查步骤（只读）</span><span class="seg-n">411 字</span></summary><p class="seg-t">1）ps -eo state,pid,ppid,wchan:24,cmd | awk &#x27;$1==&quot;D&quot;&#x27; | head -30
+2）cat /proc/pressure/io，看 some 与 full 的 avg10、avg60（内核 4.20 以上才有此文件）
+3）vmstat 1 5，看 r 列与 wa 列
+4）iostat -x 1 5（装了 sysstat 才有），看 %util 与 await
+5）mount | grep -E &#x27;nfs|cifs&#x27;，有网络存储先怀疑它
+修复步骤（需确认后执行）：
+1）先定位到具体设备或挂载点再动手，方向没定之前不要调任何参数；
+2）如果是 NFS/CIFS 服务端慢，去恢复存储侧，加 CPU 完全无用；
+3）如果是 cgroup IO 限流，调整 io.max，注意这会改变同一层其他容器的 IO 份额；
+4）不要靠调 vm 参数去压 load，指标好看了问题还在。</p></details><details class="seg"><summary><span class="seg-k">验证步骤</span><span class="seg-n">79 字</span></summary><p class="seg-t">load average 的 1/5/15 三个值同步下降；/proc/pressure/io 的 some avg10 回落；ps 里 D 状态进程数减少。</p></details><details class="seg"><summary><span class="seg-k">回滚</span><span class="seg-n">65 字</span></summary><p class="seg-t">调整 cgroup io.max 前先记录原值（cat /sys/fs/cgroup/.../io.max）；纯只读步骤无需回滚。</p></details><details class="seg"><summary><span class="seg-k">需确认</span><span class="seg-n">40 字</span></summary><p class="seg-t">这台机器有没有挂 NFS/CIFS、业务是否跑在容器里、块设备是本地盘还是云盘。</p></details></div>
+    </div>
+
+    <p class="wk-after">另外三项没画图，脚本里一起输出了：100 条问法不重复（0 条重复）、训练集与验证集 0 条串味、100 条 system 完全一致（True）。</p>
+  </div>
+</section>
+  <section class="block wk" id="w2">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2>猜数字</h2><span class="sec-en">Guess the Number</span></div>
+    <div class="wk-lead">
+      <p>见习周第二天上午用 CSGClaw 做的第一个东西，从发需求到能玩大概二十分钟。放上来不是因为有多难，是因为它说明了一件事：任务描述里把规则、边界、输出格式写全，生成的东西第一版就能用；只说一句「做个猜数字」，就得来回来回改。</p>
+    </div>
+
+    <div class="game-shell">
+      <div class="game-main">
+        <p class="game-range mono">1 — 100</p>
+        <p class="game-msg" id="gMsg">心里想好了一个 1 到 100 的整数，你来猜。</p>
+        <div class="game-input">
+          <input id="gIn" type="number" min="1" max="100" inputmode="numeric" placeholder="输入一个数" aria-label="猜的数字">
+          <button id="gGo" type="button">猜</button>
+          <button id="gRe" type="button" class="ghost">再玩一次</button>
+        </div>
+        <div class="game-meta">
+          <span>已猜 <b id="gCnt">0</b> 次</span>
+          <span id="gHint" class="game-hint"></span>
+        </div>
+      </div>
+      <div class="game-side">
+        <p class="gs-t">猜过的</p>
+        <div class="gs-list" id="gList"><span class="gs-none">还没有</span></div>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="panel">
+        <div class="panel-h"><span class="panel-t">当时发的那段话</span><span class="panel-s">一次没改</span></div>
+        <pre class="ask">做一个网页猜数字小游戏。
+
+规则：系统随机生成 1 到 100 的整数，玩家输入后提示
+「大了」「小了」或「猜对了」，记录已猜次数，猜对后显示
+用了几次并提供「再玩一次」按钮。
+
+界面：单页、居中、字号大到手在手机上能看清，不要外部图片。
+只交一个能直接打开的 HTML 文件。</pre>
+      </div>
+      <div class="panel">
+        <div class="panel-h"><span class="panel-t">这段话里真正起作用的部分</span><span class="panel-s">三段缺一段就得返工</span></div>
+        <div class="why">
+          <div class="why-item"><span class="why-k">规则</span><p>随机 1 到 100、提示大了小了、记次数、猜对给重开。这四条定死了，就没有「猜 0 到 999」这种自选动作。</p></div>
+          <div class="why-item"><span class="why-k">边界</span><p>写清「只交一个能直接打开的 HTML 文件」，它就不会拆成 html + css + js 三个文件，也不用起服务才能看。</p></div>
+          <div class="why-item"><span class="why-k">输出格式</span><p>「不要外部图片」这句省掉了找图、放图、图裂三轮；「字号大到手在手机上能看清」比「好看一点」可执行得多。</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="block wk" id="w3">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2>一张能点开的知识图</h2><span class="sec-en">Knowledge Map</span></div>
+    <div class="wk-lead">
+      <p>见习周要求手画一张大模型的图交上去。手画完又照着做了一版能点的，点哪个节点就解释哪个。图角那行小字是老师要求加的，也是这一周的主线：上下文、工具调用、Skill 封装，三个都在第二支上。</p>
+    </div>
+
+    <script type="application/json" id="kgData">{"root": {"t": "大模型", "d": "整张图的总线。三条主线都从这里分出去，没有一条绕开它。", "kids": []}, "b1": {"t": "它是什么", "d": "先知道边界在哪，才知道哪些事该交给它做。", "kids": ["参数与权重", "上下文窗口", "概率生成"]}, "l11": {"t": "参数与权重", "d": "训练完就不再变的那部分，决定它「会什么」。", "kids": []}, "l12": {"t": "上下文窗口", "d": "一次能看进去多少字。超出就记不住，很多「它怎么忘了」的真因在这里。", "kids": []}, "l13": {"t": "概率生成", "d": "逐 token 预测，同样的输入也可能给不同答案；要稳定，就得把格式约束写死。", "kids": []}, "b2": {"t": "怎么让它干活", "d": "这一周真正用到的就是这一支。", "kids": ["上下文", "工具调用 MCP", "Skill 封装"]}, "l21": {"t": "上下文", "d": "把现场材料塞进去：文件、日志、报错。它看到什么，就只能基于什么回答。", "kids": []}, "l22": {"t": "工具调用 MCP", "d": "让它自己能读文件、跑脚本、查数据。工具返回什么，它才知道什么，不用猜。", "kids": []}, "l23": {"t": "Skill 封装", "d": "把一套固定流程写成一个可复用的动作，下次一句话就能调起来。", "kids": []}, "b3": {"t": "怎么让它变专业", "d": "通用能力和专业能力是两件事，后者得自己做。", "kids": ["预训练", "SFT 微调", "评测"]}, "l31": {"t": "预训练", "d": "底座，个人做不了，只能选。", "kids": []}, "l32": {"t": "SFT 微调", "d": "用 100 条自己写的样本改它说话的格式，这周的作业就是这一步。", "kids": []}, "l33": {"t": "评测", "d": "改完要知道有没有真的变好，靠固定的对比问题，不靠感觉。", "kids": []}}</script>
+    <div class="kg-wrap">
+      <svg class="kg" viewBox="0 0 700 600" role="img" aria-label="大模型知识图"><path class="kg-e" d="M138,300 C213.0,300 213.0,96 252,96" /><path class="kg-e" d="M138,300 C213.0,300 213.0,300 252,300" /><path class="kg-e" d="M138,300 C213.0,300 213.0,504 252,504" /><path class="kg-e" d="M408,96 C443.0,96 443.0,56 556,56" /><path class="kg-e" d="M408,96 C443.0,96 443.0,96 556,96" /><path class="kg-e" d="M408,96 C443.0,96 443.0,136 556,136" /><path class="kg-e" d="M408,300 C443.0,300 443.0,260 556,260" /><path class="kg-e" d="M408,300 C443.0,300 443.0,300 556,300" /><path class="kg-e" d="M408,300 C443.0,300 443.0,340 556,340" /><path class="kg-e" d="M408,504 C443.0,504 443.0,464 556,464" /><path class="kg-e" d="M408,504 C443.0,504 443.0,504 556,504" /><path class="kg-e" d="M408,504 C443.0,504 443.0,544 556,544" /><g class="kg-n kg-root" data-k="root" transform="translate(96,300)"><circle r="42"/><text y="5">大模型</text></g><g class="kg-n kg-branch" data-k="b1" transform="translate(330,96)"><rect x="-78" y="-17" width="156" height="34" rx="3"/><text y="5">它是什么</text></g><g class="kg-n kg-leaf" data-k="l11" transform="translate(556,56)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">参数与权重</text></g><g class="kg-n kg-leaf" data-k="l12" transform="translate(556,96)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">上下文窗口</text></g><g class="kg-n kg-leaf" data-k="l13" transform="translate(556,136)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">概率生成</text></g><g class="kg-n kg-branch" data-k="b2" transform="translate(330,300)"><rect x="-78" y="-17" width="156" height="34" rx="3"/><text y="5">怎么让它干活</text></g><g class="kg-n kg-leaf" data-k="l21" transform="translate(556,260)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">上下文</text></g><g class="kg-n kg-leaf" data-k="l22" transform="translate(556,300)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">工具调用 MCP</text></g><g class="kg-n kg-leaf" data-k="l23" transform="translate(556,340)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">Skill 封装</text></g><g class="kg-n kg-branch" data-k="b3" transform="translate(330,504)"><rect x="-78" y="-17" width="156" height="34" rx="3"/><text y="5">怎么让它变专业</text></g><g class="kg-n kg-leaf" data-k="l31" transform="translate(556,464)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">预训练</text></g><g class="kg-n kg-leaf" data-k="l32" transform="translate(556,504)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">SFT 微调</text></g><g class="kg-n kg-leaf" data-k="l33" transform="translate(556,544)"><rect x="0" y="-14" width="140" height="28" rx="2"/><text x="10" y="5">评测</text></g></svg>
+      <aside class="kg-panel">
+        <p class="kg-k mono" id="kgK">主线 2</p>
+        <h3 id="kgT">怎么让它干活</h3>
+        <p id="kgD">这一周真正用到的就是这一支。</p>
+        <p class="kg-kids" id="kgKids"></p>
+        <p class="kg-tip">点左边任何一个节点</p>
+        <p class="kg-foot">本周用到的是：上下文 + 工具调用（MCP）+ Skill 封装</p>
+      </aside>
+    </div>
+  </div>
+</section>
+  <section class="block wk" id="w4">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2>巡检工具接进 MCP</h2><span class="sec-en">MCP Server</span></div>
+    <div class="wk-lead">
+      <p>实习时在排涝站做的活，有一半是「哪条告警更急」。这件事规则清楚、判断重复，正适合交给工具，不该让模型自己猜。所以把判级规则写成一个本地 MCP server，两个工具：一个读巡检 CSV 判等级，一个解释等级。CSGClaw 走 stdio 直接调，模型拿到的是算好的结果，不是猜的。下面是真握手跑出来的，一个字没改。</p>
+      <p class="wk-where">server mcp_patrol/server.py · 客户端 mcp_patrol/probe.py · 样本 alarms_sample.csv · 纯标准库</p>
+    </div>
+
+    <div class="grid2 grid2-wide">
+      <div class="panel">
+        <div class="panel-h"><span class="panel-t">暴露的两个工具</span><span class="panel-s">python server.py 就能跑</span></div>
+        <div class="tool">
+          <div class="tool-h"><span class="tool-n mono">patrol_scan</span><span class="tool-io"><code>csv_path</code> → text</span></div>
+          <p class="tool-d">读取排涝站巡检 CSV（列：site,device,metric,value），逐条返回等级、一句中文说明，以及是否需要现场确认。</p>
+        </div><div class="tool">
+          <div class="tool-h"><span class="tool-n mono">explain_level</span><span class="tool-io"><code>level</code> → text</span></div>
+          <p class="tool-d">解释 high / medium / low 三个等级在这套规则里的处置要求。</p>
+        </div>
+        <pre class="log">→ initialize
+   {&quot;serverInfo&quot;: {&quot;name&quot;: &quot;patrol-alarm&quot;, &quot;version&quot;: &quot;0.1.0&quot;}}
+→ tools/list
+   [patrol_scan, explain_level]
+→ tools/call  patrol_scan
+   {&quot;csv_path&quot;: &quot;alarms_sample.csv&quot;}
+← 共 12 条，最高等级 high</pre>
+      </div>
+
+      <div class="panel">
+        <div class="panel-h"><span class="panel-t">一次真实返回</span><span class="panel-s">共 12 条，最高等级 high</span></div>
+        <div class="alarms"><div class="alarm lv-high">
+          <span class="al-v">高</span>
+          <span class="al-site">海口·龙昆北泵站 · 1#泵</span>
+          <span class="al-d">池内液位 4.72m，超过警戒 4.5m</span>
+        </div><div class="alarm lv-high">
+          <span class="al-v">高</span>
+          <span class="al-site">海口·长流泵站 · RTU</span>
+          <span class="al-d">通信中断 12 分钟</span>
+        </div><div class="alarm lv-high">
+          <span class="al-v">高</span>
+          <span class="al-site">海口·长流泵站 · 双电源柜</span>
+          <span class="al-d">备用电源自检失败</span>
+        </div><div class="alarm lv-medium">
+          <span class="al-v">中</span>
+          <span class="al-site">海口·龙昆北泵站 · 进水口</span>
+          <span class="al-d">格栅前后液位差 0.62m，拦污偏重</span>
+        </div><div class="alarm lv-medium">
+          <span class="al-v">中</span>
+          <span class="al-site">海口·长流泵站 · 3#泵</span>
+          <span class="al-d">机组振动 4.9mm/s，偏高</span>
+        </div><div class="alarm lv-low">
+          <span class="al-v">低</span>
+          <span class="al-site">海口·长流泵站 · 3#泵</span>
+          <span class="al-d">液位 3.18m，在阈值内</span>
+        </div></div>
+        <p class="panel-note">同等级里按「通信是否断、备用电源是否就绪、液位」排。通信断了后面全是猜的，所以要排最前面报。每条都带 needs_confirm，模型知道哪些能直接建议、哪些必须先问人。</p>
+        <div class="reply"><span class="reply-k">explain_level("high")</span><p>现场有直接风险或已经越限。先只读确认（液位、电流、告警记录），任何停机、断电、切泵都要先报值班长确认。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="closing">
+        <p>这四个都不是「演示用」的：数据集要交给老师，巡检工具是照着实习那个泵站写的，知识图周四要交，猜数字是当天上午的作业。做的时候想的是同一个问题——面试官问「这个你做过吗」，我能不能直接打开给他看。</p>
+        <span class="who">符振信 · FU ZHENXIN</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="assets/works.js?v=17bde68b"></script>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div>
+      <h2>聊一聊？</h2>
+      <p class="f-lead">简历可以看，但有些事情写不进去。岗位在海南，或者你想先确认某段经历到底做到什么程度，直接发邮件就行。</p>
+      <p class="print-only f-print-title">联系方式 / Contact</p>
+      <div class="f-row print-only"><span class="f-k">手机</span><span class="f-v">15799056622</span></div>
+      <div class="f-row">
+        <span class="f-k">Email</span>
+        <a class="f-v" href="mailto:249384428@qq.com">249384428@qq.com</a>
+        <button class="copy-btn" type="button" data-copy="249384428@qq.com">复制</button>
+      </div>
+      <div class="f-row"><span class="f-k">GitHub</span><a class="f-v" href="https://github.com/249384428-cpu" target="_blank" rel="noopener">github.com/249384428-cpu</a></div><div class="f-row f-extra"><span class="f-k">开源仓库</span><a class="f-v" href="https://github.com/249384428-cpu/kaihuang-survival" target="_blank" rel="noopener">《开荒生存》· MIT</a></div><div class="f-row f-extra"><span class="f-k">在线试玩</span><a class="f-v" href="https://249384428-cpu.github.io/kaihuang-survival/" target="_blank" rel="noopener">点开就能玩</a></div>
+      <div class="f-row"><span class="f-k">所在地</span><span class="f-v">海南海口</span></div>
+      <div class="f-row f-status"><span class="f-k">状态</span><span class="f-v">2027 届 · 校招进行中</span></div>
+    </div>
+    <div class="f-right">
+        <a class="f-btn" href="assets/pdf/general.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg> 下载 PDF 简历</a>
+        <a class="f-btn" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg> 返回方向总览</a>
+      </div>
+  </div>
+  <div class="wrap">
+    <div class="colophon">
+      <span>© 2026 符振信 · 在线简历，内容以 PDF 版为准</span>
+      <span>HTML / CSS / 无框架 · 单页可打印</span>
+    </div>
+  </div>
+</footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="assets/app.js?v=17bde68b"></script>
+</body>
+</html>
