@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>符振信 · 在线简历</title>
+<style>
+  :root{--ink:#151a22;--sub:#5a6472;--line:#e4e9f0;--paper:#ffffff;--bg:#f4f6f9;--accent:#1d4ed8;--accent-soft:#eef2ff}
+  *{box-sizing:border-box}
+  html,body{margin:0;min-height:100%}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:920px;margin:0 auto;padding:0 26px}
+  header.top{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);box-shadow:0 2px 14px rgba(20,30,50,.04)}
+  .top-inner{display:flex;align-items:center;gap:20px;height:64px}
+  .brand{font-weight:800;font-size:17px;letter-spacing:.5px;white-space:nowrap;display:flex;align-items:center;gap:9px}
+  .brand::before{content:"";width:9px;height:9px;border-radius:2px;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+  .brand small{font-weight:500;color:var(--sub);font-size:11px;margin-left:2px}
+  .tabs{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+  .tab{border:1px solid transparent;background:transparent;color:var(--sub);padding:8px 16px;border-radius:9px;font-size:13.5px;cursor:pointer;white-space:nowrap;font-weight:600;transition:all .2s ease}
+  .tab:hover{background:var(--accent-soft);color:var(--accent)}
+  .tab.on{background:var(--accent);color:#fff;box-shadow:0 4px 12px color-mix(in srgb,var(--accent) 28%,transparent)}
+  main{background:var(--paper);margin:26px auto;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 10px 40px rgba(20,30,50,.07)}
+  section{padding:38px 0;border-bottom:1px solid var(--line)}
+  section:last-child{border-bottom:0}
+  section:first-child{background:linear-gradient(180deg,var(--accent-soft) 0%,#fff 80%)}
+  .eyebrow{display:inline-block;color:var(--accent);font-size:11.5px;font-weight:700;letter-spacing:1px;margin:0 0 14px;padding:5px 12px;border-radius:6px;background:#fff;border:1px solid color-mix(in srgb,var(--accent) 24%,transparent)}
+  h1{font-size:34px;line-height:1.35;margin:0 0 8px;letter-spacing:.5px;font-weight:800;color:#161b24}
+  h1 .br{display:block}
+  .en{color:var(--sub);font-size:12.5px;letter-spacing:2px;margin:0 0 18px;text-transform:uppercase;font-weight:600}
+  .lead{color:#495363;font-size:14.5px;max-width:720px;margin:0 0 26px;line-height:1.85}
+  .metrics{display:flex;gap:14px;flex-wrap:wrap}
+  .metric{position:relative;background:linear-gradient(160deg,#fff,var(--accent-soft));border:1px solid color-mix(in srgb,var(--accent) 16%,var(--line));border-radius:12px;padding:14px 20px;min-width:130px;box-shadow:0 4px 14px rgba(20,30,50,.05);transition:transform .2s ease,box-shadow .2s ease}
+  .metric:hover{transform:translateY(-3px);box-shadow:0 8px 22px color-mix(in srgb,var(--accent) 18%,transparent)}
+  .metric::before{content:"";position:absolute;top:0;left:16px;right:16px;height:2px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.6}
+  .metric .v{font-size:23px;font-weight:800;color:var(--accent);letter-spacing:.3px}
+  .metric .l{font-size:11.5px;color:var(--sub);margin-top:3px}
+  .sec-h{display:flex;align-items:center;gap:12px;margin-bottom:22px;padding-bottom:12px;border-bottom:2px solid var(--line)}
+  .sec-h .n{font-size:25px;color:var(--accent);font-weight:800;line-height:1;letter-spacing:-1px}
+  .sec-h h2{font-size:19px;margin:0;font-weight:800}
+  .sec-h .e{margin-left:auto;color:#9aa3b0;font-size:10.5px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+  .skill-row{display:flex;gap:14px;padding:11px 0;border-bottom:1px solid var(--line)}
+  .skill-row:last-child{border-bottom:0}
+  .skill-k{flex:0 0 96px;color:var(--accent);font-weight:700;font-size:13px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px}
+  .tag{background:#f3f5f9;border:1px solid var(--line);border-radius:7px;padding:4px 10px;font-size:12.5px;color:#3d4655;font-weight:500}
+  .proj{display:flex;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .proj:last-child{border-bottom:0}
+  .proj-side{flex:0 0 100px;color:var(--sub);font-size:11px;padding-top:4px}
+  .proj-side .no{display:block;font-weight:800;color:var(--accent);font-size:14px;margin-bottom:2px}
+  .proj-body{flex:1}
+  .proj-body h3{margin:0 0 3px;font-size:16px;font-weight:700;color:#1a1f28}
+  .proj-kind{color:var(--accent);font-size:11px;margin-bottom:9px;font-weight:600;opacity:.9}
+  .proj-body ul{margin:0;padding-left:18px}
+  .proj-body li{font-size:13px;margin:4px 0;color:#39414f}
+  .proj-stack{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+  .chip{font-size:11px;color:#5f6a7a;background:#f5f7fa;border:1px solid var(--line);border-radius:20px;padding:3px 10px}
+  .tl-item{padding:16px 0;border-bottom:1px solid var(--line)}
+  .tl-item:last-child{border-bottom:0}
+  .tl-head{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline}
+  .tl-org{font-weight:800;font-size:15px;color:#1a1f28}
+  .tl-role{color:var(--accent);font-weight:700;font-size:12px;background:var(--accent-soft);padding:2px 9px;border-radius:5px}
+  .tl-period{margin-left:auto;color:#8b95a4;font-size:11.5px;font-weight:500}
+  .tl-place{color:var(--sub);font-size:12px;margin:4px 0 9px}
+  .tl-item ul{margin:0;padding-left:18px}
+  .tl-item li{font-size:13px;margin:4px 0;color:#39414f}
+  .edu{display:flex;gap:24px;flex-wrap:wrap}
+  .edu h3{margin:0;font-size:18px;font-weight:800;color:#1a1f28}
+  .edu .sub{color:var(--sub);font-size:13px}
+  .edu .cols{display:flex;gap:26px;flex-wrap:wrap;margin-top:10px}
+  .closing{background:linear-gradient(120deg,var(--accent-soft),#fff);border:1px solid var(--line);border-left:3px solid var(--accent);padding:16px 20px;border-radius:0 10px 10px 0;font-size:13px;color:#374158;margin-top:24px;line-height:1.8}
+  footer{background:linear-gradient(180deg,#151a24,#0e121a);color:#c9d0da;padding:30px 0;font-size:13px}
+  footer h2{margin:0 0 10px;color:#fff;font-size:16px}
+  .frow{margin:5px 0}
+  .fk{display:inline-block;width:64px;color:#7f8a99}
+  footer a{color:#9fc0ff;text-decoration:none}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+  @media(max-width:640px){.proj{flex-direction:column;gap:6px}.proj-side{flex:auto}.tl-period{margin-left:0}h1{font-size:23px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap top-inner">
+  <div class="brand" id="brand"></div>
+  <div class="tabs" id="tabs"></div>
+</div></header>
+
+<main>
+  <section><div class="wrap">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 id="headline"></h1>
+    <p class="en" id="en"></p>
+    <p class="lead" id="lead"></p>
+    <div class="metrics" id="metrics"></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-h"><span class="n">01</span><h2>专业技能</h2><span class="e">Skillset</span></div>
+    <div id="skills"></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-h"><span class="n">02</span><h2>项目与作品</h2><span class="e">Selected Work</span></div>
+    <div id="projects"></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-h"><span class="n">03</span><h2>实习与实训</h2><span class="e">Experience</span></div>
+    <div id="experience"></div>
+  </div></section>
+
+  <section><div class="wrap">
+    <div class="sec-h"><span class="n">04</span><h2>教育背景</h2><span class="e">Education</span></div>
+    <div class="edu" id="edu"></div>
+    <div class="closing" id="closing"></div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <h2>联系方式</h2>
+  <div class="frow"><span class="fk">Email</span><a id="email" href=""></a></div>
+  <div class="frow"><span class="fk">GitHub</span><a id="gh" href="" target="_blank" rel="noopener"></a></div>
+  <div class="frow"><span class="fk">所在地</span><span id="city"></span></div>
+  <div class="frow"><span class="fk">简历</span><a id="pdf" href="assets/pdf/general.pdf" download>下载 PDF 简历</a></div>
+</div></footer>
+
+
+
+<script>
+const D = {"profile": {"name": "符振信", "name_en": "FU ZHENXIN", "school": "海南大学", "college": "信息与通信工程学院", "major": "电子信息工程", "degree": "本科", "grade": "2023 级", "grad": "2027 届", "city": "海南海口", "email": "zhenxinfu716@gmail.com", "phone": "15799056622", "github": "249384428-cpu", "pdf": "assets/pdf/general.pdf", "site_url": "https://249384428-cpu.github.io/resume", "links": [["开源仓库", "https://github.com/249384428-cpu/kaihuang-survival", "《开荒生存》· MIT"], ["在线试玩", "https://249384428-cpu.github.io/kaihuang-survival/", "无需安装"]]}, "edu": {"school": "海南大学", "college": "信息与通信工程学院", "major": "电子信息工程（本科）", "period": "2023.09 — 2027.06", "note": "主修课程", "courses": ["电路原理", "模拟电子技术", "数字电子技术", "信号与系统", "通信原理", "计算机网络", "单片机原理", "嵌入式系统", "传感器原理", "数据结构", "数字信号处理", "高频电子线路"]}, "extras": {"competition": [["2025 全国大学生电子设计竞赛", "E 题 简易自行瞄准装置 · 负责底盘与瞄准模块"]], "leadership": [["青云书院国防教育中心 · 会长", "大二至大三 · 统筹 10 余人团队，负责部门规划、任务分配与日常运营；策划国防知识竞赛、征兵宣讲、军事体验日等活动，累计覆盖千余人次"], ["班级组织委员", "大一 · 协助组织班级活动，负责签到、物资与现场协调"]]}, "directions": {"embedded": {"name": "嵌入式软件", "en": "Embedded Software", "eyebrow": "嵌入式软件工程师 · 2027 届", "headline": "STM32 驱动 · PID 闭环", "lead": "四轴无人机与循迹小车的驱动、通信与 PID 闭环按模块实现，飞控板与小车底板自行设计。调试使用示波器与逻辑分析仪确认波形。", "metrics": [["±1°", "姿态控制精度"], ["<0.1s", "电机响应时间"], ["10m", "2.4G 通信零丢包"]], "specs": [["学历", "本科 · 2027 届"], ["专业", "电子信息工程"], ["所在地", "海南海口"], ["求职", "嵌入式软件 / 固件开发"], ["到岗", "2027.07 前可实习"]], "skills": [["主控平台", ["STM32F103", "51 系列", "TI MSPM0G3507", "LPC1114"]], ["外设驱动", ["GPIO / ADC", "Timer / PWM", "外部中断", "编码器测速", "OLED(I2C)", "NRF24L01"]], ["通信协议", ["UART", "SPI", "I2C", "2.4G 私有协议"]], ["控制算法", ["PID 姿态环", "速度闭环", "电机驱动 TB6612 / SI2302", "循迹与定距"]], ["调试工具", ["Keil5", "VSCode", "示波器", "逻辑分析仪", "万用表", "Git"]]], "projects": ["drone", "ece", "radar", "carboard"], "experience": ["lingfeng", "laillai"], "closing": "飞控板与小车底板自行焊接，驱动与通信程序自行编写，波形问题使用示波器与逻辑分析仪定位。", "accent": "#1D4ED8", "accent_soft": "#EEF2FF"}, "hardware": {"name": "硬件设计 / PCB", "en": "Hardware & Layout", "eyebrow": "硬件工程师 · 2027 届", "headline": "双层板 Layout · 打样验证", "lead": "四轮小车底板与 PerFei 飞控板的原理图、Layout、Gerber 与 BOM 由本人完成。电源、电机驱动与地平面按设计规则核对，焊接与上电测试自行完成。", "metrics": [["2 块", "自主设计主板"], ["双层", "板层结构"], ["0603", "贴装密度"]], "specs": [["学历", "本科 · 2027 届"], ["专业", "电子信息工程"], ["所在地", "海南海口"], ["求职", "硬件设计 / PCB Layout"], ["到岗", "2027.07 前可实习"]], "skills": [["EDA 工具", ["Altium Designer", "立创 EDA", "原理图 / PCB / Gerber", "BOM 与坐标文件输出"]], ["电路设计", ["Buck 降压与电池供电", "MOS 电机驱动", "MCU 最小系统", "传感器与接口电路"]], ["Layout 要点", ["双层板布局", "地平面与回流路径", "大电流走线加宽", "时钟与差分线避让"]], ["器件与工艺", ["0603 阻容高密度贴装", "封装与实物核对", "连接器选型", "可制造性检查"]], ["焊接与测试", ["手焊与返修", "分模块上电", "万用表 / 示波器验证", "信号完整性初判"]]], "projects": ["carboard", "perfei", "radar", "drone"], "experience": ["lingfeng", "laillai"], "closing": "输出 Gerber 前逐项核对封装、丝印、间距与阻焊桥，完成打样与焊接后按电源、主控、外设顺序上电测试。", "accent": "#0E7490", "accent_soft": "#ECFEFF"}, "ai": {"name": "数据与模型 / Agent", "en": "Data, Model & Agent", "eyebrow": "AI 应用 / 模型工程 · 2027 届", "headline": "数据集 · Qwen 微调 · 智能体", "lead": "开放传神见习周构造 100 条 Linux 排障问答数据集并完成 Qwen2-0.5B 的 LoRA 微调；《开荒生存》与数据集在 GitHub 公开；独立完成语音加图像生成的智能体。", "metrics": [["100 条", "结构化问答"], ["0.5B", "Qwen2 + LoRA"], ["2 个", "公开仓库"]], "specs": [["学历", "本科 · 2027 届"], ["专业", "电子信息工程"], ["所在地", "海南海口"], ["求职", "数据与模型 / Agent"], ["到岗", "2027.07 前可实习"]], "skills": [["数据", ["JSONL 结构归一化", "全量脚本校验", "90 / 10 切分", "数据卡与来源标注"]], ["模型", ["Qwen2-0.5B + LoRA 训练与调参", "PyTorch 本地训练（RTX 4060 / CUDA 12.3）", "前后对比与分项评测"]], ["智能体", ["执行循环与停止条件", "Function Calling（Spring AI 2.0 + SSE）", "MCP 与工具协议", "Skill 封装", "上下文分层", "四种测试"]], ["开源与工具", ["CSGClaw", "GitHub / Pages 发布", "MIT 与 README", "单文件 HTML 零依赖"]], ["工程", ["Python（Django / Flask / FastAPI）", "Java（Spring AI）", "Linux 排障", "Git", "西门子与和利时 PLC + 组态王"]]], "projects": ["dataset", "kaihuang", "multiagent"], "experience": ["opencsg", "laillai", "lingfeng"], "closing": "Qwen2-0.5B 微调后的输出按四项指标核对：格式完整、顺序正确、缺信息时追问、越权操作确认。", "accent": "#6D28D9", "accent_soft": "#F5F3FF"}}, "projects": {"carboard": {"title": "四轮智能小车双层主控板（LPC1114）", "period": "2026.06 — 2026.07", "kind": "自主设计 · 原理图 / PCB / 打样 / 焊接", "stack": ["立创 EDA", "LPC1114", "ITR9909 ×5", "N20 ×4", "双层板"], "variants": {"embedded": ["PCB 由本人设计，引脚资源在硬件阶段已确定：五路灰度、四路电机 PWM、OLED 与蜂鸣器的分配无需在驱动阶段重新确认。", "五路灰度按位读取后加权计算偏移量，相比纯开关量判断更平滑，直道循迹不易左右摆动。", "电机以 PWM 加方向脚控制，配合编码器构成速度闭环，单板即可完成循迹、避障与声光提示。"], "hardware": ["双层板布局：底层整片铺地作为回流路径，电机大电流走线加宽并远离灰度信号线，避免循迹采样受电机噪声影响。", "五路 ITR9909 沿板边等距排布，安装孔与探头开孔位置按实物车架反推确定，降低装配对位偏差。", "0603 阻容高密度贴装，封装库全部按实物核对后再绘制；导出 Gerber 前逐项检查线宽、间距、丝印与阻焊。", "打样后独立手焊，按模块分批上电（电源—主控—外设），缩小排查范围。"], "ai": ["以立创 EDA 完成原理图与双层 PCB：LPC1114 核心板座、五路 ITR9909 光电循迹、四路 N20 电机接口、OLED（I2C）、蜂鸣器与按键。", "两节 14500 锂电池供电，含防反接与稳压，逻辑电源与电机电源分开走线。", "导出 Gerber 与 BOM 交付打样，回板后独立完成焊接并逐模块上电测试。"]}}, "dataset": {"title": "Linux 排障数据集 + Qwen2-0.5B LoRA 微调", "period": "2026.11", "kind": "数据集 · 模型微调 · 开放传神 AI+ 见习周", "stack": ["Qwen2-0.5B-Instruct", "LoRA", "JSONL", "PyTorch", "CSGHub"], "variants": {"embedded": ["构建 100 条问答：60 条从报错到排查（20 类故障各三种问法）、20 条信息不足需追问、20 条危险操作需确认。输出固定为八段，从风险等级到需确认，训练目标是一套回答规范而非 Linux 知识本身。", "以校验脚本对全量数据做一致性检查：100 条中无一条第四段使用规定段名，69 条存在三种叫法、31 条缺段；64 条将判断理由混入风险等级字段；答案中位数 565 字、最长 1130 字；问法无重复，训练集与验证集无交叉。随后按段名切分、补齐缺失段、统一 system 提示，按固定种子以 90/10 划分。", "基于 Qwen2-0.5B-Instruct 做 LoRA 微调：秩 8、学习率 1e-4、3 轮、max_length 2048、梯度累积 8。小样本阶段完成训练并输出前后对比；扩展至 100 条后按同一评测口径记录结果，差异归因尚未确定，三个假设待验证，未验证的结论不计入成果。"], "hardware": ["构建 100 条问答：60 条从报错到排查（20 类故障各三种问法）、20 条信息不足需追问、20 条危险操作需确认。输出固定为八段，从风险等级到需确认，训练目标是一套回答规范而非 Linux 知识本身。", "以校验脚本对全量数据做一致性检查：100 条中无一条第四段使用规定段名，69 条存在三种叫法、31 条缺段；64 条将判断理由混入风险等级字段；答案中位数 565 字、最长 1130 字；问法无重复，训练集与验证集无交叉。随后按段名切分、补齐缺失段、统一 system 提示，按固定种子以 90/10 划分。", "基于 Qwen2-0.5B-Instruct 做 LoRA 微调：秩 8、学习率 1e-4、3 轮、max_length 2048、梯度累积 8。小样本阶段完成训练并输出前后对比；扩展至 100 条后按同一评测口径记录结果，差异归因尚未确定，三个假设待验证，未验证的结论不计入成果。"], "ai": ["构建 100 条 Linux 排障问答：60 条从报错到排查（20 类故障各三种问法）、20 条信息不足需追问、20 条危险操作需确认，输出固定八段。", "以校验脚本对全量数据做一致性检查，查出无一条第四段使用规定段名、64 条将判断理由混入风险等级；随后按段名切分、补齐缺失段、统一 system 提示，按固定种子以 90/10 切分。", "Qwen2-0.5B 加 LoRA（秩 8 / 学习率 1e-4 / 3 轮 / max_length 2048 / 梯度累积 8）：小样本阶段完成训练并输出前后对比，按格式完整、顺序正确、缺信息追问、越权确认四项核对；扩展至 100 条后按同一评测口径记录结果，三个假设待验证。"]}}, "drone": {"title": "基于 STM32 的小四轴无人机", "period": "2025.07", "kind": "个人项目", "stack": ["STM32F103", "MPU6050", "NRF24L01", "PID", "电机驱动"], "variants": {"embedded": ["飞控端与遥控器端均独立实现，按键扫描、OLED 状态显示、无线收发与姿态解算按模块划分，可单独调试。", "控制周期由定时器中断保证，避免在主循环内执行 PID 造成周期抖动。", "从 MPU6050 原始数据读取、零偏校准，到滤波、姿态解算与四路 PWM 输出，整条信号链独立完成。"], "hardware": ["飞控板与遥控器的供电、四路电机驱动电路独立设计，含电池电压采样分压网络与防反接保护。", "布线时将电机大电流回路与 MPU6050 的 I2C 走线分置两侧，降低换相过程中的地弹干扰。", "完成打样、手工焊接与上电测试全流程，整机实测 10 米通信零丢包、续航 ≥ 8 分钟。"], "ai": ["完成 STM32F103 飞控端与遥控器端软件开发，基于 NRF24L01 搭建 2.4G 双向通信，设计电机驱动与供电电路。", "通过 MPU6050 采集加速度与角速度，编写 PID 姿态解算并输出四路 PWM，实现悬停状态下的姿态稳定。", "采集电池电压实现低电量报警，实测电压监测误差 ≤ 0.05V。", "整机实测：10 米内通信零丢包、续航 ≥ 8 分钟、姿态精度 ±1°、电机响应 < 0.1s。"]}}, "ece": {"title": "2025 全国大学生电子设计竞赛 E 题 · 简易自行瞄准装置", "period": "2025.07 — 2025.08", "kind": "团队竞赛 · 负责底盘与瞄准模块", "stack": ["TI MSPM0G3507", "八路灰度", "TB6612", "步进电机", "编码器"], "variants": {"embedded": ["八路灰度按位打包读取，主循环仅做决策，采样与 PWM 更新置于定时器中断，保证控制周期稳定。", "编码器以外部中断计数测速，速度环与位置环分开调节，先稳定速度再确定距离。", "完成 1—5 圈循迹测试（单圈约 20s），2—3 环内定位（单圈 ≤ 2s），参数与成绩均有记录。"], "hardware": ["八路灰度传感器的安装高度与间距在实物上反复调整，规避反光地面误判与相邻通道串扰。", "电机驱动与主控分开供电，步进电机部分单独走线并加去耦，降低对灰度采样的干扰。", "完成小车 1—5 圈循迹测试（单圈约 20s），2—3 环内定位（单圈 ≤ 2s）。"], "ai": ["以 TI MSPM0G3507 为主控，负责底盘循迹与瞄准模块的软件开发，外接八路灰度传感器、TB6612 驱动、步进电机与 OLED。", "八路灰度实时采集路面偏移量，以 PWM 与定时器中断实现电机闭环，编码器测速反馈至 PID 调节。", "完成 1—5 圈循迹测试（单圈约 20s），2—3 环内实现定位（单圈 ≤ 2s），各项功能测试与数据记录独立完成。"]}}, "kaihuang": {"title": "开荒生存 · 开源动作 Roguelite", "period": "2026.11", "kind": "开源项目 · CSGClaw · 已发布", "stack": ["单文件 HTML", "Canvas", "CSGClaw", "MIT", "GitHub Pages"], "variants": {"embedded": ["基于 CSGClaw 开发的单文件动作 Roguelite，约 2400 行 HTML，零外部依赖，双击即可运行；已发布于 github.com/249384428-cpu/kaihuang-survival（MIT，README 与截图齐全），并通过 GitHub Pages 提供在线试玩。", "五种武器的判定形状、前摇后摇与位移惩罚各不相同；包含 36 张升级卡、三章三 Boss、程序化地形与代码生成的像素精灵。", "迭代过程中以 Node 无头仿真结合真实浏览器截图验收，定位到 drawVfx 未定义导致每帧崩溃的问题；随后增加 16 项 FEATURE_MANIFEST 启动自检，避免功能在重建时丢失。"], "hardware": ["基于 CSGClaw 开发的单文件动作 Roguelite，约 2400 行 HTML，零外部依赖，双击即可运行；已发布于 github.com/249384428-cpu/kaihuang-survival（MIT，README 与截图齐全），并通过 GitHub Pages 提供在线试玩。", "五种武器的判定形状、前摇后摇与位移惩罚各不相同；包含 36 张升级卡、三章三 Boss、程序化地形与代码生成的像素精灵。", "迭代过程中以 Node 无头仿真结合真实浏览器截图验收，定位到 drawVfx 未定义导致每帧崩溃的问题；随后增加 16 项 FEATURE_MANIFEST 启动自检，避免功能在重建时丢失。"], "ai": ["以 CSGClaw 生成单文件动作 Roguelite，约 2400 行 HTML，零外部依赖；已开源（MIT）并提供 Pages 在线试玩，入口含 16 项启动自检。", "五种武器判定形状与前后摇各不相同，36 张升级卡、三章三 Boss、程序化地形与代码生成的像素精灵。", "验收环节用 Node 无头仿真加浏览器截图逐帧核对，定位到入场白屏与每帧崩溃两类问题，修复后固化为启动自检项。"]}}, "multiagent": {"title": "多 Agent 评测与求职工作台（CSGClaw）", "period": "2026.11", "kind": "个人项目 · 对照评测", "stack": ["CSGClaw", "多 Agent 协作", "对照评测", "断网可用"], "variants": {"embedded": ["以同一份校招任务单做 10 轮对照：单 Agent 5 轮、多 Agent 5 轮。两组完成率均为 100%，事实错误 0，硬门槛漏判 0。", "多 Agent 平均 650.4s、单 Agent 平均 844.2s；剔除一次 1918s 挂起后单 Agent 反而更快，说明并行拆分的收益取决于任务粒度，而非 Agent 数量。", "评测口径先定义再执行：完成率、事实错误、硬门槛漏判三项独立统计，避免只看单次得分而忽略稳定性。另附一个断网可用的求职工作台，岗位筛选、简历对照与投递记录均保存在本地。"], "hardware": ["以同一份校招任务单做 10 轮对照：单 Agent 5 轮、多 Agent 5 轮。两组完成率均为 100%，事实错误 0，硬门槛漏判 0。", "多 Agent 平均 650.4s、单 Agent 平均 844.2s；剔除一次 1918s 挂起后单 Agent 反而更快，说明并行拆分的收益取决于任务粒度，而非 Agent 数量。", "评测口径先定义再执行：完成率、事实错误、硬门槛漏判三项独立统计，避免只看单次得分而忽略稳定性。另附一个断网可用的求职工作台，岗位筛选、简历对照与投递记录均保存在本地。"], "ai": ["同一任务单跑 10 轮对照（单 Agent 5 轮 / 多 Agent 5 轮）：完成率均 100%，事实错误 0，硬门槛漏判 0；耗时上多 Agent 平均 650.4s、单 Agent 844.2s。", "剔除一次 1918s 挂起后，单 Agent 反而更快。结论是多 Agent 的收益来自任务能否被清晰切分，与 Agent 数量本身无直接关系。", "评测前先定义三项指标并独立统计，避免用单次得分替代稳定性判断。工作台断网可运行，数据全部本地留存。"]}}, "perfei": {"title": "四轮驱动主板 PerFei V1.85（Altium Designer）", "period": "2025.06", "kind": "自主设计 · PCB Layout", "stack": ["Altium Designer", "SI2102 ×4", "功率电感", "0603", "Gerber"], "variants": {"embedded": ["在 Altium Designer 中完成四轮驱动主板 V1.85 的 PCB 设计与制造文件输出。", "四路 MOS（SI2102）电机驱动、功率电感降压、双色与 RGB 指示灯，阻容以 0603 为主。", "按打样厂工艺要求核对线宽、间距与丝印，输出 Gerber 与 BOM 交付生产。"], "hardware": ["四路 SI2102 MOS 驱动按大电流路径布局，MOS 与电机接口就近放置，功率回路面积压至最小。", "功率电感降压部分单独划区，输入输出电容紧贴引脚，功率地与信号地单点连接。", "0603 阻容高密度排布，丝印仅保留必要标识，避免焊接后元件遮挡。", "导出前逐个核对封装与实物一致性、焊盘间距与阻焊桥，减少打样返工。"], "ai": ["在 Altium Designer 中完成四轮驱动主板 V1.85 的 PCB 设计与制造文件输出。", "四路 MOS（SI2102）电机驱动、功率电感降压、双色与 RGB 指示灯，阻容以 0603 为主。", "按打样厂工艺要求核对线宽、间距与丝印，输出 Gerber 与 BOM 交付生产。"]}}, "radar": {"title": "基于 FMCW 雷达的目标测距实测与仿真验证", "period": "2025.03 — 2025.05", "kind": "课程项目 · 独立完成", "stack": ["MATLAB", "FMCW", "距离维 FFT", "77GHz", "加窗"], "variants": {"embedded": ["由调频连续波模型推导距离与中频的关系，在 MATLAB 中完成发射、回波、混频、加窗与距离维 FFT 的仿真链路。", "将 77GHz 实测距离谱与仿真逐点比对，定位加窗方式、采样点数与多目标互扰三项误差来源。", "对从物理模型到数字化处理链路（采样、加窗、FFT）的完整过程有实践理解。"], "hardware": ["理解 77GHz 射频前端与基带采样的信号链路：发射调频、回波混频、中频采样与数字处理各环节的对应关系。", "实测中对比不同加窗方式与采样点数对距离谱分辨率与旁瓣的影响。", "仿真与实测偏差逐项归因，说明射频链路与数字处理需要联合评估。"], "ai": ["由锯齿波调频模型推导中频信号与目标距离的关系，在 MATLAB 中搭建发射、回波、混频、加窗与距离维 FFT 的全链路仿真。", "将 77GHz 实测距离谱与仿真结果逐点比对，定位出加窗方式、采样点数与多目标互扰对测距结果的影响。", "仿真与实测的偏差来源逐项归因，而非仅给出单次测距数值。"]}}}, "internships": {"laillai": {"org": "广州后浪来也", "role": "校企实训项目 · 后端开发", "period": "2026.06 — 2026.07", "place": "广州", "tag": "后端", "variants": {"embedded": ["基于 Django / Flask / FastAPI 完成接口实现、参数校验与数据联调，接口按契约交付。", "独立搭建对话式 AI Agent，集成语音通话与图像生成，以多节点工作流串联端到端应用。"], "hardware": ["用 Python 编写数据处理脚本，硬件测试中可将采集数据批量整理成表。", "按接口契约完成后端交付，需求到联调的链路完整跟进。"], "ai": ["独立搭建对话式 AI Agent，集成语音通话与图像生成，以多节点工作流将对话、生成与回传串联为完整链路。", "熟悉大模型 API 的落地流程：需求梳理、流程编排至上线演示，清楚各环节的主要风险点。", "具备后端接口开发经历，可独立完成 Agent 服务端接入，无需额外协作。"]}}, "lingfeng": {"org": "海南凌峰科技", "role": "工程部 · 自动化工程实习生", "period": "2026.07 — 2026.09", "place": "海口 · 江东新区排涝站自动化工程", "tag": "工业自动化", "variants": {"embedded": ["负责 PLC 程序与上位机组态，完成数据采集与设备调试，与嵌入式驱动开发在采集与控制链路上有共通之处。", "多设备联调与通信测试的现场经验，可直接复用于实验室通信问题排查。"], "hardware": ["熟悉现场控制柜接线与端子排，理解图纸与实物的差异，PCB 设计阶段即考虑安装与接线方式。", "按工程规范与接线标准逐项核查，单个点位错误即可导致联锁判断失效。", "参与多设备联调与现场验收，了解设备上柜后的实际工作量分布。"], "ai": ["海口江东新区排涝站：用西门子、和利时 PLC 编写泵组启停与闸门联锁，组态王完成监控、采集与报警；从单设备到多设备联调，定位并消除仪表与上位机的通信中断和联锁误动作。", "整理点表、联锁说明与调试纪要作为验收资料。工业现场数据的组织方式与误判代价，后续直接体现在排障助手的 system 设计上：涉及变更先确认，越权操作不执行。"]}}, "opencsg": {"org": "开放传神（OpenCSG）", "role": "AI+ 见习周 · 50 人分组实训", "period": "2026.11", "place": "东方市", "tag": "数据与模型", "variants": {"embedded": ["见习任务为排障知识的结构化整理：20 类故障按报错现象到排查步骤组织为固定八段，与固件中统一协议帧格式的做法一致。", "以校验脚本对 100 条数据做全量检查，定位字段缺失与命名不一致后完成归一化处理。", "完成 Qwen2-0.5B 的 LoRA 微调与训练前后对比，理解小模型在格式约束与事实准确性上的边界。"], "hardware": ["在 50 人分组实训中承担数据规范化工作：100 条问答统一为八段结构，以校验脚本完成全量检查与缺失字段补齐。", "完成 Qwen2-0.5B 的 LoRA 微调与训练前后对比，理解小模型的能力边界。", "分组协作下按节点交付数据卡与对比结果。"], "ai": ["见习任务为构建 Linux 排障助手的数据集与微调环节。完成 100 条问答：60 条覆盖 20 类故障的报错到排查（各三种问法），20 条考察信息不足时的追问，20 条考察危险操作的确认，答案统一为八段格式。", "以校验脚本对全量数据做一致性检查，查出第四段段名不统一、判断理由混入风险等级等问题；随后按段名切分、补齐缺失段、统一 system 提示，按固定种子以 90/10 划分训练与验证集，问法无重复、两集无交叉。", "在 Qwen2-0.5B-Instruct 上完成 LoRA 微调（秩 8、学习率 1e-4、3 轮、max_length 2048、梯度累积 8），输出训练前后对比，按四项指标核对格式与边界行为；数据扩至 100 条后按同一评测口径记录结果，三项假设待验证。"]}}}, "order": ["embedded", "hardware", "ai"]};
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ul = items => '<ul>' + items.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+
+function render(dirId){
+  const d = D.directions[dirId], p = D.profile;
+  const LIGHT = {embedded:['#1d4ed8','#eef2ff'],hardware:['#0e7490','#ecfeff'],ai:['#6d28d9','#f5f3ff']};
+  const theme = LIGHT[dirId] || [d.accent, d.accent_soft];
+  document.documentElement.style.setProperty('--accent', theme[0]);
+  document.documentElement.style.setProperty('--accent-soft', theme[1]);
+  document.getElementById('brand').innerHTML = esc(p.name) + '<small>Portfolio · ' + esc(p.grad.replace(' 届','')) + '</small>';
+  document.getElementById('eyebrow').textContent = d.eyebrow;
+  document.getElementById('headline').innerHTML = d.headline.split('\n').map(esc).join('<span class="br"></span>');
+  document.getElementById('en').textContent = p.name_en + ' / ' + d.en;
+  document.getElementById('lead').textContent = d.lead;
+  document.getElementById('metrics').innerHTML = d.metrics.map(m =>
+    '<div class="metric"><div class="v">' + esc(m[0]) + '</div><div class="l">' + esc(m[1]) + '</div></div>').join('');
+
+  document.getElementById('skills').innerHTML = d.skills.map(([g, items]) =>
+    '<div class="skill-row"><div class="skill-k">' + esc(g) + '</div><div class="tags">' +
+    items.map(i => '<span class="tag">' + esc(i) + '</span>').join('') + '</div></div>').join('');
+
+  document.getElementById('projects').innerHTML = d.projects.map((k, i) => {
+    const it = D.projects[k], v = it.variants[dirId];
+    return '<div class="proj"><div class="proj-side"><div class="no">P' + String(i+1).padStart(2,'0') +
+      '</div>' + esc(it.period) + '</div><div class="proj-body"><h3>' + esc(it.title) +
+      '</h3><div class="proj-kind">' + esc(it.kind) + '</div>' + ul(v) +
+      (it.stack && it.stack.length ? '<div class="proj-stack">' + it.stack.map(s => '<span class="chip">' + esc(s) + '</span>').join('') + '</div>' : '') +
+      '</div></div>';
+  }).join('');
+
+  document.getElementById('experience').innerHTML = d.experience.map(k => {
+    const it = D.internships[k], v = it.variants[dirId];
+    return '<div class="tl-item"><div class="tl-head"><span class="tl-org">' + esc(it.org) +
+      '</span><span class="tl-role">' + esc(it.role) + '</span><span class="tl-period">' + esc(it.period) +
+      '</span></div><div class="tl-place">' + esc(it.tag ? it.tag + ' · ' : '') + esc(it.place) +
+      '</div>' + ul(v) + '</div>';
+  }).join('');
+
+  const e = D.edu;
+  document.getElementById('edu').innerHTML =
+    '<div><h3>' + esc(e.school) + '</h3><div class="sub">' + esc(e.college) + ' · ' + esc(e.major) +
+    '</div><div class="sub">' + esc(e.period) + '</div></div><div class="cols"><div><div class="fk" style="width:auto;color:#98a1ad">' +
+    esc(e.note) + '</div><div class="tags" style="margin-top:6px">' + e.courses.map(c => '<span class="tag">' + esc(c) + '</span>').join('') +
+    '</div></div></div>';
+  document.getElementById('closing').textContent = d.closing;
+
+  const email = document.getElementById('email');
+  email.textContent = p.email; email.href = 'mailto:' + p.email;
+  const gh = document.getElementById('gh');
+  gh.textContent = 'github.com/' + p.github; gh.href = 'https://github.com/' + p.github;
+  document.getElementById('city').textContent = p.city;
+
+  document.querySelectorAll('.tab').forEach(t => t.classList.toggle('on', t.dataset.id === dirId));
+}
+
+document.getElementById('tabs').innerHTML = D.order.map(k =>
+  '<button class="tab" data-id="' + k + '">' + esc(D.directions[k].name) + '</button>').join('');
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => render(t.dataset.id)));
+render(D.order[0]);
+</script>
+</body>
+</html>
